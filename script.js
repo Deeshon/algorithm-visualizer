@@ -3,24 +3,23 @@ const bars = document.querySelectorAll(".bar")
 const newArray = document.querySelector("#new")
 const sort = document.querySelector("#sort")
 
-let count = 0
-let array = []
 
-while (count < 30) {
-    let n = Math.floor(Math.random() * 60) + 1;
-    array.push(n*10)
-    count+=1
-}
+
+
+
 
 
 newArray.addEventListener('click', () => {
-    bars.forEach((bar) => {
-        let n = Math.floor(Math.random() * 60) + 1;
-        const bbar = document.getElementById(`${bar.id}`)
-        bbar.style.height = `${n*10}px`
+    canvas.innerHTML = ""
 
-    
-    })
+    for (let i = 0; i < 100; i++) {
+        let n = Math.floor(Math.random() * 60) + 1;
+        let div = document.createElement('div')
+        div.setAttribute('class', 'bar')
+        div.setAttribute('id', `bar${i}`)
+        div.setAttribute('style', `height: ${n*10}px`)
+        canvas.appendChild(div)
+    }
     
 })
 
