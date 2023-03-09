@@ -12,7 +12,7 @@ const sort = document.querySelector("#sort")
 newArray.addEventListener('click', () => {
     canvas.innerHTML = ""
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 60; i++) {
         let n = Math.floor(Math.random() * 60) + 1;
         let div = document.createElement('div')
         div.setAttribute('class', 'bar')
@@ -26,5 +26,5 @@ newArray.addEventListener('click', () => {
 
 
 sort.addEventListener('click', async function(){
-     bubble();
+     selection();
 });
