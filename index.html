@@ -8,27 +8,30 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <script src="script.js" defer></script>
     <script src="bubble.js" defer></script>
-    <script src="sort.js"></script>
-    <script src="selection.js"></script>
+    <script src="sort.js" defer></script>
+    <script src="selection.js" defer></script>
     <title>Sorting Visualizer</title>
 </head>
 <body>
     <div class="header">
         <div>
-            <h1 style="padding-left: 50px;">Sorting Visualizer</h1>
+            <h1 style="padding-left: 30px;">Sorting Visualizer</h1>
         </div>
         <div class="options">
             <form>
-                <input type="text" placeholder="SPEED" name="speed" id="speed">
-                <input type="text" placeholder="RANGE" name="range" id="range">
-                <input type="text" placeholder="SIZE" name="size" id="size">
+                Speed
+                <input type="range" min="0" max="100" value="50" name="speed" id="speed">
+                Range
+                <input type="range" min="10" max="60" value="60" name="range" id="range">
+                Size
+                <input type="range" min="10" max="60" value="60" name="size" id="size">
                 <select name="option" id="option">
                     <option value="bubble">Bubble Sort</option>
-                    <option value="merge">Merge Sort</option>
-                    <option value="Binary">Binary Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="Binary">Merge Sort</option>
                 </select>
             </form>
-            <div style="margin-left: 900px; margin-top: -25px;">
+            <div style="margin-left: 1000px; margin-top: -60px; display: flex; flex-direction: column;">
                 <button id="new">Generate Array</button>
                 <button id="sort">Sort</button>
             </div>
